@@ -67,12 +67,12 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    Binding binding(Queue queueA, DirectExchange exchange) {
-        return BindingBuilder.bind(queueA).to(exchange).with(routingKeyInternal);
+    Binding binding() {
+        return BindingBuilder.bind(queueA()).to(exchange()).with(routingKeyInternal);
     }
 
     @Bean
-    Binding bindingB(Queue queueB, DirectExchange exchange) {
-        return BindingBuilder.bind(queueB).to(exchange).with(routingKeyInternalOne);
+    Binding bindingB() {
+        return BindingBuilder.bind(queueB()).to(exchange()).with(routingKeyInternalOne);
     }
 }
