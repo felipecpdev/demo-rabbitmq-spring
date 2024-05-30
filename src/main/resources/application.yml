@@ -14,14 +14,17 @@ spring:
         format_sql: true
     show-sql: true
   rabbitmq:
-    addresses: localhost:5672
+    username: guest
+    password: guest
+    port: 5674
+    host: localhost
 # rabbitmq config
 rabbitmq:
   exchanges:
-    internal: internal.exchange # create a new topic exchange name
+    internal: internal.exchange
   queues:
-    notification: notification.queue # create a new queue name
-    notification-one: notification-one.queue # create a new queue name
+    notification: notification.queue
+    notification-one: notification-one.queue
   routing-keys:
-    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)
-    internal-notification-one: internal.notification.routing-key-one # create a new name of exchange and queue (binding)
+    internal-notification: internal.notification.routing-key
+    internal-notification-one: internal.notification.routing-key-one
