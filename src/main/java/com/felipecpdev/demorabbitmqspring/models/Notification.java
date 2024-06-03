@@ -14,7 +14,8 @@ import java.time.LocalDateTime;
 public class Notification {
 
     @Id
-    private Integer notificationId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long notificationId;
     private Integer toCustomerId;
     private String toCustomerEmail;
     private String sender;

@@ -26,7 +26,6 @@ public class NotificationProducer {
     public void pushNotification() {
         NotificationRequest notificationRequest = new NotificationRequest(
                 random.nextInt(Integer.MAX_VALUE) + 1,
-                random.nextInt(Integer.MAX_VALUE) + 1,
                 "felipe.contreras.dev@gmail.com",
                 "Hi AMQ, welocome to felipecpdev"
         );
